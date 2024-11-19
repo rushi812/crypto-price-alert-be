@@ -5,7 +5,7 @@ const router = express.Router();
 // POST route to create a subscription
 router.post("/", async (req, res) => {
   const { id, email, price } = req.body;
-console.log('Req Body:', req.body);
+  console.log('Req Body:', req);
   if (!id || !email || !price) {
     return res
       .status(400)
